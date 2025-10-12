@@ -1,16 +1,16 @@
 // Конфигурация SMS API
 const SMS_CONFIG = {
-    login: 'ortosalon.tj',
-    hash: 'c908aeb36c62699337e59e6d78aeeeaa',
-    sender: 'OrtosalonTj',
+    login: 'ortoplustj',
+    hash: 'a52e96c812d0b30aee23cc3ebd93d98a',
+    sender: 'Ortoplus',
     server: 'https://api.osonsms.com/sendsms_v1.php'
 };
 
 // НОВАЯ КОНФИГУРАЦИЯ для синхронизации данных между устройствами
 const CLOUD_SYNC_CONFIG = {
     // Используем JSONBin.io для бесплатного облачного хранилища
-    binId: '68e78e8aae596e708f0bb24e', // ID для хранилища пользователей (создайте свой!)
-    apiKey: '$2a$10$YC7NQGItIeryJjaqSp/7oes7nTxC1YKQ9M3VVomFXDImvTlKn6QUm', // Ваш API ключ
+    binId: '68ebc131d0ea881f409f1d60', // ID для хранилища пользователей (создайте свой!)
+    apiKey: '$2a$10$KN9N1PK8kpK3RnH46uDtY.XRG51JVUumStqkC0lETjQcZU7tJX/7K', // Ваш API ключ
     baseUrl: 'https://api.jsonbin.io/v3/b',
     enabled: true // Включить синхронизацию с облаком
 };
