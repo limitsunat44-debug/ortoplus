@@ -413,7 +413,7 @@ pre code {
 }
 
 .btn--primary {
-  background: var(--color-primary);
+  background: var(--color-orange-400);
   color: var(--color-btn-primary-text);
 }
 
