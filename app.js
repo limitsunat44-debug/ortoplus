@@ -2,7 +2,7 @@
 const SMS_CONFIG = {
     login: 'ortoplustj',
     hash: 'a52e96c812d0b30aee23cc3ebd93d98a',
-    sender: 'Ortoplus',
+    sender: 'OrtoPlus',
     server: 'https://api.osonsms.com/sendsms_v1.php'
 };
 
