@@ -164,7 +164,7 @@
     --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
 
     /* Semantic Color Tokens (Dark Mode) */
-    --color-background: var(--color-charcoal-700);
+    --color-background: var(--color-orange-400);
     --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
     --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
