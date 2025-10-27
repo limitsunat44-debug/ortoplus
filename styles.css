@@ -1,0 +1,552 @@
+/* Дизайн карты лояльности - стиль как на фото */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0a1f44 0%, #1a3a5c 50%, #2d5a7b 100%);
+    min-height: 100vh;
+    padding: 0;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 430px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Форма авторизации */
+.auth-section {
+    background: linear-gradient(135deg, #0f2744 0%, #1a3e5f 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+.auth-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.back-btn, .menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover, .menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-step {
+    display: none;
+}
+
+.auth-step.active {
+    display: block;
+}
+
+.auth-content {
+    text-align: center;
+}
+
+.auth-icon {
+    font-size: 64px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.auth-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.auth-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 32px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.phone-input-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.country-code {
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 100px;
+}
+
+.country-code:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+input[type="tel"],
+input[type="text"],
+.code-input {
+    flex: 1;
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.code-input {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: 600;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 13px;
+    margin: 12px 0;
+    text-align: center;
+    min-height: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-link {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: color 0.3s;
+}
+
+.btn-link:hover {
+    color: #ffffff;
+}
+
+/* Личный кабинет */
+.dashboard {
+    background: linear-gradient(135deg, #0f2744 0%, #1a3e5f 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Виртуальная карта */
+.virtual-card {
+    margin-bottom: 20px;
+}
+
+.card-gradient {
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    min-height: 200px;
+}
+
+.card-pattern {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.card-logo {
+    font-size: 28px;
+}
+
+.card-chip {
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+.card-info {
+    color: #ffffff;
+}
+
+.card-number {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.card-holder {
+    margin-bottom: 16px;
+}
+
+.card-holder-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.card-holder-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.card-date-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Баланс */
+.balance-section {
+    margin-bottom: 20px;
+}
+
+.balance-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.balance-icon {
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    background: rgba(76, 175, 80, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.balance-info {
+    flex: 1;
+}
+
+.balance-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+}
+
+.balance-amount {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.balance-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.balance-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Секции */
+.barcode-section,
+.profile-section {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+}
+
+/* Штрихкод */
+.barcode-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+.barcode-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+#barcodeDisplay {
+    max-width: 100%;
+    height: auto;
+}
+
+.barcode-number {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 2px;
+}
+
+/* Профиль */
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.info-row {
+    margin-bottom: 16px;
+}
+
+.info-row label {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.info-row input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.info-row input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.info-row input[readonly] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Кнопка выхода */
+.btn-logout {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 107, 107, 0.2);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 12px;
+    color: #ff6b6b;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-logout:hover {
+    background: rgba(255, 107, 107, 0.3);
+}
+
+/* Скрытие */
+.hidden {
+    display: none !important;
+}
+
+/* Адаптивность */
+@media (max-width: 430px) {
+    .container {
+        padding: 0;
+    }
+
+    .auth-section,
+    .dashboard {
+        padding: 16px;
+    }
+
+    .card-number {
+        font-size: 18px;
+    }
+
+    .balance-amount {
+        font-size: 24px;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard,
+.auth-section {
+    animation: fadeIn 0.5s ease;
+}
+
+.virtual-card {
+    animation: fadeIn 0.6s ease 0.1s backwards;
+}
+
+.balance-section {
+    animation: fadeIn 0.6s ease 0.2s backwards;
+}
+
+.barcode-section {
+    animation: fadeIn 0.6s ease 0.3s backwards;
+}
+
+.profile-section {
+    animation: fadeIn 0.6s ease 0.4s backwards;
+}
