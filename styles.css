@@ -197,7 +197,8 @@ input:focus {
 
 .btn-link {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 5px 5px 5px 10px;
+  margin: 20px 100px 0px;
   background-color: #008CBA;
   color: white;
   text-decoration: none;
